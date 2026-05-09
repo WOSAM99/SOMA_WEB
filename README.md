@@ -79,6 +79,7 @@ Use one of these exact values in the `category` column:
 
 - `juices`
 - `smoothies`
+- `milkshakes`
 - `iceCream`
 - `addOns`
 
@@ -195,6 +196,7 @@ Valid category values are:
 
 - `juices`
 - `smoothies`
+- `milkshakes`
 - `iceCream`
 - `addOns`
 

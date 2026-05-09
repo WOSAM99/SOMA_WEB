@@ -1,4 +1,9 @@
-export type MenuCategory = "juices" | "smoothies" | "iceCream" | "addOns";
+export type MenuCategory =
+  | "juices"
+  | "smoothies"
+  | "milkshakes"
+  | "iceCream"
+  | "addOns";
 
 export type MenuItem = {
   id: string;

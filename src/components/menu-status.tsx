@@ -7,8 +7,8 @@ export function MenuStatus({ source, error }: MenuStatusProps) {
   const isStarter = source === "starter";
 
   return (
-    <section className="section-shell pt-8">
-      <div className="rounded-[1.5rem] border border-soma-green/10 bg-white/80 px-4 py-4 text-sm text-slate-600 shadow-soft">
+    <section className="mx-auto max-w-4xl px-4 pt-3">
+      <div className="border border-soma-green/10 bg-white/80 px-3 py-2 text-xs text-slate-600 shadow-soft">
         <p className="font-semibold text-soma-leaf">
           {isStarter ? "Starter menu is active" : "Google Sheets is connected"}
         </p>

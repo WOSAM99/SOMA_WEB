@@ -6,6 +6,7 @@ import type { MenuCategory, MenuItem, MenuState } from "@/lib/types";
 const validCategories = new Set<MenuCategory>([
   "juices",
   "smoothies",
+  "milkshakes",
   "iceCream",
   "addOns"
 ]);
@@ -15,6 +16,8 @@ const categoryAliases: Record<string, MenuCategory> = {
   juices: "juices",
   smoothie: "smoothies",
   smoothies: "smoothies",
+  milkshake: "milkshakes",
+  milkshakes: "milkshakes",
   icecream: "iceCream",
   "ice cream": "iceCream",
   veganicecream: "iceCream",
@@ -274,6 +277,7 @@ export function getVisibleMenu(items: MenuItem[]) {
   const grouped = {
     juices: [] as MenuItem[],
     smoothies: [] as MenuItem[],
+    milkshakes: [] as MenuItem[],
     iceCream: [] as MenuItem[],
     addOns: [] as MenuItem[]
   };

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#7edc63",
+                    "tertiary-container": "#b5a760",
+                    "on-tertiary-container": "#453c00",
+                    "surface-container-low": "#f6f3ed",
+                    "background": "#fcf9f3",
+                    "secondary-fixed": "#aef4a4",
+                    "on-primary-container": "#0a4700",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#e5e2dc",
+                    "surface-bright": "#fcf9f3",
+                    "on-secondary-fixed": "#002203",
+                    "on-background": "#1c1c18",
+                    "primary-container": "#5fbb46",
+                    "on-tertiary-fixed-variant": "#514708",
+                    "tertiary-fixed": "#f3e396",
+                    "surface": "#fcf9f3",
+                    "inverse-primary": "#7edc63",
+                    "tertiary": "#6a5f20",
+                    "surface-container": "#f0eee8",
+                    "outline-variant": "#bfcab6",
+                    "on-secondary-fixed-variant": "#105216",
+                    "on-primary-fixed": "#032100",
+                    "primary-fixed": "#99f97c",
+                    "surface-container-high": "#ebe8e2",
+                    "inverse-on-surface": "#f3f0ea",
+                    "on-secondary-container": "#337131",
+                    "on-tertiary-fixed": "#211b00",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#d6c77d",
+                    "on-surface-variant": "#404a3a",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#156e00",
+                    "secondary-fixed-dim": "#93d78a",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e5e2dc",
+                    "on-primary-fixed-variant": "#0e5300",
+                    "outline": "#707a69",
+                    "secondary-container": "#aef4a4",
+                    "primary": "#156e00",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#1c1c18",
+                    "inverse-surface": "#31312d",
+                    "secondary": "#2c6b2c",
+                    "surface-dim": "#dcdad4",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        @media print {
+            .no-print { display: none; }
+            body { background-color: white; }
+            aside { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            main { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fcf9f3;
+        }
+    </style>
+</head>
+<body class="text-on-background antialiased flex justify-center py-4 px-6 lg:px-0 min-h-screen">
+<main class="relative bg-surface w-full max-w-[210mm] min-h-[297mm] shadow-[0_0_50px_rgba(0,0,0,0.02)] overflow-hidden flex flex-col">
+
+<!-- Yellow sidebar right -->
+<aside class="z-40 overflow-hidden bg-[#d6edd6] text-[#2c6b2c] font-['Plus_Jakarta_Sans'] text-xs tracking-[0.18em] font-bold absolute right-0 top-0 h-full w-16 flex flex-col justify-center items-center gap-10">
+<div class="rotate-90 whitespace-nowrap opacity-70 uppercase" style="font-size:9px;">Drink Clean. Feel Alive.</div>
+</aside>
+<!-- Yellow sidebar right 2 -->
+<aside class="z-40 overflow-hidden bg-[#a8d5a8] text-[#2c6b2c] font-['Plus_Jakarta_Sans'] text-xs tracking-[0.18em] font-bold absolute right-16 top-0 h-full w-16 flex flex-col justify-center items-center gap-10">
+<div class="rotate-90 whitespace-nowrap opacity-70 uppercase" style="font-size:9px;">Drink Clean. Feel Alive.</div>
+</aside>
+<!-- Yellow sidebar right 3 -->
+<aside class="z-40 overflow-hidden bg-[#7bb87b] text-[#fcf9f3] font-['Plus_Jakarta_Sans'] text-xs tracking-[0.18em] font-bold absolute right-32 top-0 h-full w-16 flex flex-col justify-center items-center gap-10">
+<div class="rotate-90 whitespace-nowrap opacity-70 uppercase" style="font-size:9px;">Drink Clean. Feel Alive.</div>
+</aside>
+
+<!-- Header -->
+<header class="flex justify-between items-end px-12 pr-60 max-w-screen-2xl mx-auto w-full pt-4 pb-1 mb-3">
+<div class="flex flex-col">
+<h1 class="text-4xl font-black tracking-tighter text-[#156e00] dark:text-[#5fbb46] leading-none lowercase">soma</h1>
+<p class="text-[#5fbb46] font-bold uppercase tracking-[0.25em] text-[10px] mt-0">VEGAN SMOOTHIES &amp; MILKSHAKES</p>
+<p class="text-[#2c6b2c] font-bold uppercase tracking-[0.18em] text-[8px] mt-1">Plant-Based &bull; No Sugar &bull; No Water</p>
+</div>
+<div class="text-[#2c6b2c] opacity-70 text-[8px] leading-snug tracking-[0.05em] font-bold uppercase text-right max-w-[190px]">
+<div>(M) 9227033556</div>
+<div>L/G 6, Bhagwati Ashish Complex</div>
+<div>City Light, Opp. Ashk Pan House</div>
+</div>
+</header>
+
+<!-- Divider -->
+<div class="mx-12 mr-60 h-[1px] bg-tertiary-fixed opacity-50 mb-4"></div>
+
+<!-- Menu Grid -->
+<div class="flex-grow px-12 pr-60 grid grid-cols-2 gap-x-8 gap-y-5 content-start">
+
+<section class="col-span-2">
+<h2 class="text-[#156e00] font-bold tracking-[0.18em] text-xs uppercase mb-1">Smoothies</h2>
+</section>
+
+<section>
+<h2 class="text-on-surface-variant font-bold tracking-[0.15em] text-xs uppercase mb-2 border-b border-outline-variant/20 pb-1 flex items-center gap-1">
+<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+<circle cx="5" cy="6" r="2.5" stroke="#156e00" stroke-width="0.8" fill="#7c3aed"/>
+<circle cx="9" cy="5" r="2.5" stroke="#156e00" stroke-width="0.8" fill="#8b5cf6"/>
+<circle cx="7" cy="9" r="2.5" stroke="#156e00" stroke-width="0.8" fill="#a78bfa"/>
+<circle cx="5" cy="6" r="0.5" fill="#c4b5fd"/>
+<circle cx="9" cy="5" r="0.5" fill="#ddd6fe"/>
+<circle cx="7" cy="9" r="0.5" fill="#ede9fe"/>
+</svg>
+<span>Berry &amp; Antioxidant</span>
+<span class="text-on-surface-variant font-normal opacity-60 italic normal-case tracking-wide">300 ml</span>
+</h2>
+<div class="space-y-3">
+<div class="flex flex-col">
+<div class="flex justify-between items-baseline">
+<span class="font-bold text-base">Sweet Blueberry Smoothie</span>
+<span class="font-semibold text-secondary">285</span>
+</div>
+<p class="text-secondary italic text-xs mt-0">Blueberry, Orange, Banana, Oat Milk, Vegan Ice Cream</p>
+<p class="text-on-surface-variant text-xs font-light mt-0">Antioxidant-rich, supports immunity and sustained energy</p>
+</div>
+<div class="flex flex-col">
+<div class="flex justify-between items-baseline">
+<span class="font-bold text-base">Raisin Strawberry Smoothie</span>
+<span class="font-semibold text-secondary">270</span>
+</div>
+<p class="text-secondary italic text-xs mt-0">Raisin, Strawberry, Oat/Almond Milk, Vegan Ice Cream</p>
+<p class="text-on-surface-variant text-xs font-light mt-0">Naturally energizing, supports digestion and heart health</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2 class="text-on-surface-variant font-bold tracking-[0.15em] text-xs uppercase mb-2 border-b border-outline-variant/20 pb-1 flex items-center gap-1">
+<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+<path d="M3 10 Q1.5 6 5 4 Q7 3 9 4 Q12 5.5 11 9 Q10 12 7 11 Q4 10 3 10Z" stroke="#156e00" stroke-width="0.9" fill="#d4a017"/>
+<path d="M3 10 Q7 7 9 4" stroke="#b8860b" stroke-width="0.6" fill="none" stroke-linecap="round"/>
+<path d="M5 4 L4.5 2.5" stroke="#156e00" stroke-width="0.9" stroke-linecap="round"/>
+<path d="M7 3.5 L7 2" stroke="#156e00" stroke-width="0.9" stroke-linecap="round"/>
+</svg>
+<span>Nut &amp; Superfood</span>
+<span class="text-on-surface-variant font-normal opacity-60 italic normal-case tracking-wide">300 ml</span>
+</h2>
+<div class="space-y-3">
+<div class="flex flex-col">
+<div class="flex justify-between items-baseline">
+<span class="font-bold text-base">Cashew Cranberry Smoothie</span>
+<span class="font-semibold text-secondary">315</span>
+</div>
+<p class="text-secondary italic text-xs mt-0">Cashewnut, Cranberry, Banana, Oat/Almond Milk, Vegan Ice Cream</p>
+<p class="text-on-surface-variant text-xs font-light mt-0">Rich in healthy fats and antioxidants, supports immunity and energy</p>
+</div>
+<div class="flex flex-col">
+<div class="flex justify-between items-baseline">
+<span class="font-bold text-base">Avocado Chocolate Smoothie</span>
+<span class="font-semibold text-secondary">250</span>
+</div>
+<p class="text-secondary italic text-xs mt-0">Avocado, Cacao, Banana, Oat Milk, Vegan Ice Cream</p>
+<p class="text-on-surface-variant text-xs font-light mt-0">Creamy, nutrient-dense blend for heart health and sustained energy</p>
+</div>
+<div class="flex flex-col">
+<div class="flex justify-between items-baseline">
+<span class="font-bold text-base">Musky Melon Smoothie</span>
+<span class="font-semibold text-secondary">240</span>
+</div>
+<p class="text-secondary italic text-xs mt-0">Muskmelon, Oat/Almond Milk, Vegan Ice Cream, Yogurt</p>
+<p class="text-on-surface-variant text-xs font-light mt-0">Hydrating and refreshing, supports digestion, skin health, and immunity</p>
+</div>
+</div>
+</section>
+
+<section class="col-span-2 mt-1">
+<h2 class="text-[#156e00] font-bold tracking-[0.18em] text-xs uppercase mb-1">Milkshakes</h2>
+</section>
+
+<section class="col-span-2">
+<div class="grid grid-cols-2 gap-x-8 gap-y-4">
+<div class="flex flex-col">
+<div class="flex justify-between items-baseline">
+<span class="font-bold text-base">Pomegranate Milkshake</span>
+<span class="font-semibold text-secondary">165</span>
+</div>
+<p class="text-secondary italic text-xs mt-0">Pomegranate, Vegan Ice Cream, Oat Milk</p>
+<p class="text-on-surface-variant text-xs font-light mt-0">Bright, fruity, and creamy with a refreshing berry-like finish</p>
+</div>
+
+<div class="flex flex-col">
+<div class="flex justify-between items-baseline">
+<span class="font-bold text-base">Triple Berry Milkshake</span>
+<span class="font-semibold text-secondary">195</span>
+</div>
+<p class="text-secondary italic text-xs mt-0">Blueberry, Cranberry, Raspberry, Vegan Ice Cream, Oat Milk</p>
+<p class="text-on-surface-variant text-xs font-light mt-0">Tangy-sweet berry blend with a rich creamy body and antioxidant kick</p>
+</div>
+
+<div class="flex flex-col">
+<div class="flex justify-between items-baseline">
+<span class="font-bold text-base">Dutch Cocoa</span>
+<span class="font-semibold text-secondary">175</span>
+</div>
+<p class="text-secondary italic text-xs mt-0">Dutch Cocoa, Belgium Vegan Ice Cream, Oat Milk</p>
+<p class="text-on-surface-variant text-xs font-light mt-0">Deep chocolate flavor with a smooth, indulgent cafe-style texture</p>
+</div>
+
+<div class="flex flex-col">
+<div class="flex justify-between items-baseline">
+<span class="font-bold text-base">Mango Milkshake</span>
+<span class="font-semibold text-secondary">195</span>
+</div>
+<p class="text-secondary italic text-xs mt-0">Mango, Vegan Ice Cream, Oat Milk</p>
+<p class="text-on-surface-variant text-xs font-light mt-0">Tropical, luscious, and naturally comforting with a ripe mango finish</p>
+</div>
+</div>
+</section>
+
+<section class="col-span-2">
+<h2 class="text-[#156e00] font-bold tracking-[0.18em] text-xs uppercase mb-2">Add-On</h2>
+<div class="rounded-xl border border-outline-variant/20 bg-[#f6f3ed] px-4 py-3">
+<div class="flex justify-between items-baseline">
+<span class="font-bold text-base">Protein Scoop</span>
+<span class="font-semibold text-secondary">80</span>
+</div>
+<p class="text-secondary italic text-xs mt-1">30 gm Protein</p>
+<p class="text-on-surface-variant text-xs font-light mt-1">No gluten, no color, and no antibiotics</p>
+</div>
+</section>
+
+</div>
+
+<!-- Footer -->
+<footer class="w-full flex justify-center items-center px-12 mt-3 pb-4">
+<div class="font-['Plus_Jakarta_Sans'] text-[9px] tracking-[0.15em] text-center uppercase text-[#2c6b2c]">
+100% Plant-Based &bull; No Sugar &bull; No Water
+</div>
+</footer>
+
+</main>
+</body></html>
