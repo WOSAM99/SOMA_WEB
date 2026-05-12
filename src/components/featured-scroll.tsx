@@ -110,9 +110,14 @@ export function FeaturedScroll({ items }: FeaturedScrollProps) {
                     <p className="mt-4 text-sm leading-6 opacity-90">
                       {item.ingredients}
                     </p>
-                    {item.benefits ? (
+                    {typeof item.kcal === "number" ? (
+                      <p className="mt-4 inline-flex rounded-full bg-white/20 px-3 py-1 text-sm font-bold">
+                        {item.kcal} kcal
+                      </p>
+                    ) : null}
+                    {item.benefits ?? item.nutritionInfo ? (
                       <p className="mt-4 text-base font-medium opacity-95">
-                        {item.benefits}
+                        {item.benefits ?? item.nutritionInfo}
                       </p>
                     ) : null}
                     {item.description ? (

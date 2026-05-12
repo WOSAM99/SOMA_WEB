@@ -43,6 +43,11 @@ const parseSortOrder = (value: string) => {
   return Number.isFinite(numeric) ? numeric : 999;
 };
 
+const parseKcal = (value: string) => {
+  const numeric = Number.parseInt(value.replace(/[^0-9]/g, ""), 10);
+  return Number.isFinite(numeric) ? numeric : undefined;
+};
+
 function slugify(value: string) {
   return value
     .toLowerCase()
@@ -56,6 +61,22 @@ function normalizeHeader(header: string) {
 
   if (compact === "availabletoday") return "availableToday";
   if (compact === "sortorder") return "sortOrder";
+  if (
+    compact === "calories" ||
+    compact === "calorie" ||
+    compact === "calorieskcal" ||
+    compact === "nutritionkcal"
+  ) {
+    return "kcal";
+  }
+  if (
+    compact === "nutrition" ||
+    compact === "nutritioninfo" ||
+    compact === "nutritionalinfo" ||
+    compact === "nutritioninformation"
+  ) {
+    return "nutritionInfo";
+  }
   return compact;
 }
 
@@ -166,7 +187,9 @@ function normalizeItem(record: Record<string, string>) {
   }
 
   const benefits = record.benefits?.trim() || undefined;
+  const nutritionInfo = record.nutritionInfo?.trim() || undefined;
   const description = record.description?.trim() || undefined;
+  const kcal = parseKcal(record.kcal ?? "");
 
   return {
     item: {
@@ -177,8 +200,12 @@ function normalizeItem(record: Record<string, string>) {
       benefits:
         category === "iceCream"
           ? benefits
-          : benefits ?? (!record.benefits ? description : undefined),
+          : benefits ??
+            nutritionInfo ??
+            (!record.benefits ? description : undefined),
+      nutritionInfo,
       description: category === "iceCream" ? description : undefined,
+      kcal,
       price: parsePrice(record.price ?? ""),
       availableToday: parseBoolean(record.availableToday ?? ""),
       sortOrder: parseSortOrder(record.sortOrder ?? ""),
@@ -297,6 +324,7 @@ export function formatCurrency(value: number) {
   return new Intl.NumberFormat("en-IN", {
     style: "currency",
     currency: "INR",
-    maximumFractionDigits: 2
+    minimumFractionDigits: 0,
+    maximumFractionDigits: Number.isInteger(value) ? 0 : 2
   }).format(value);
 }

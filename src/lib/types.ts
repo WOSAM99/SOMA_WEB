@@ -11,7 +11,9 @@ export type MenuItem = {
   name: string;
   ingredients: string;
   benefits?: string;
+  nutritionInfo?: string;
   description?: string;
+  kcal?: number;
   price: number;
   availableToday: boolean;
   sortOrder: number;

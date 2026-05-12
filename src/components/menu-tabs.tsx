@@ -40,6 +40,11 @@ function getAddOns(items: MenuItem[]) {
   return hasProteinScoop ? items : [...items, proteinScoop];
 }
 
+function splitMenuItems(items: MenuItem[]) {
+  const midpoint = Math.ceil(items.length / 2);
+  return [items.slice(0, midpoint), items.slice(midpoint)];
+}
+
 export function MenuTabs({ groupedMenu }: MenuTabsProps) {
   const [activeTab, setActiveTab] = useState<MenuTab>(() => {
     if (groupedMenu.juices.length > 0) return "juices";
@@ -50,6 +55,7 @@ export function MenuTabs({ groupedMenu }: MenuTabsProps) {
     return "iceCream";
   });
   const addOns = getAddOns(groupedMenu.addOns);
+  const [primaryJuices, secondaryJuices] = splitMenuItems(groupedMenu.juices);
 
   return (
     <div className="bg-[#fcf9f3]">
@@ -97,7 +103,12 @@ export function MenuTabs({ groupedMenu }: MenuTabsProps) {
           <CompactMenuGroup
             title="Juices"
             measure="300 ml"
-            items={groupedMenu.juices}
+            items={primaryJuices}
+          />
+          <CompactMenuGroup
+            title="More Juices"
+            measure="300 ml"
+            items={secondaryJuices}
           />
         </CompactMenuScreen>
       ) : null}

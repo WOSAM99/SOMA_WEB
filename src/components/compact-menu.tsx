@@ -16,6 +16,10 @@ type CompactMenuGroupProps = {
   items: MenuItem[];
 };
 
+function getMenuNote(item: MenuItem) {
+  return item.benefits ?? item.nutritionInfo ?? item.description;
+}
+
 export function CompactMenuScreen({
   id,
   eyebrow,
@@ -82,20 +86,36 @@ export function CompactMenuGroup({
         </div>
       ) : null}
 
-      <div className="space-y-2.5">
+      <div className="space-y-3">
         {items.map((item) => (
-          <article key={item.id} className="min-w-0">
-            <div className="flex items-baseline justify-between gap-3">
-              <h4 className="min-w-0 text-[15px] font-extrabold leading-tight text-[#1c1c18]">
+          <article
+            key={item.id}
+            className="min-w-0 border-l-2 border-[#8ac174]/60 pl-3"
+          >
+            <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3">
+              <h4 className="min-w-0 break-words text-[15px] font-extrabold leading-tight text-[#1c1c18]">
                 {item.name}
               </h4>
               <p className="shrink-0 text-sm font-extrabold text-[#2c6b2c]">
                 {formatCurrency(item.price)}
               </p>
             </div>
-            {item.ingredients ? (
+            {item.ingredients || typeof item.kcal === "number" ? (
               <p className="mt-0.5 text-[11px] italic leading-4 text-[#2c6b2c]">
                 {item.ingredients}
+                {item.ingredients && typeof item.kcal === "number" ? (
+                  <span className="mx-1.5 text-[#7e8a78]">/</span>
+                ) : null}
+                {typeof item.kcal === "number" ? (
+                  <span className="not-italic font-bold text-[#6f7d68]">
+                    {item.kcal} kcal
+                  </span>
+                ) : null}
+              </p>
+            ) : null}
+            {getMenuNote(item) ? (
+              <p className="mt-1 text-[10.5px] font-semibold leading-4 text-[#5c6656]">
+                {getMenuNote(item)}
               </p>
             ) : null}
           </article>

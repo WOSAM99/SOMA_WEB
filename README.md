@@ -67,11 +67,13 @@ The owner manages menu items entirely in Google Sheets.
 
 ### 1. Create the sheet
 
-Create a Google Sheet with one tab. The first row must contain these exact column names:
+Create a Google Sheet with one tab. The first row must contain these column names:
 
 ```text
-id | category | name | ingredients | benefits | description | price | availableToday | sortOrder | featured
+id | category | name | ingredients | benefits | nutritionInfo | kcal | description | price | availableToday | sortOrder | featured
 ```
+
+`benefits`, `nutritionInfo`, `kcal`, `description`, and `featured` are optional, but `kcal` is recommended for every drink if you want calories to appear on the menu.
 
 ### 2. Valid category values
 
@@ -149,6 +151,8 @@ Add a new row in Google Sheets and fill in:
 Optional fields:
 
 - `benefits`
+- `nutritionInfo`
+- `kcal`
 - `description`
 - `featured`
 
@@ -169,6 +173,8 @@ Update these columns directly in the sheet:
 - `name`
 - `ingredients`
 - `benefits`
+- `nutritionInfo`
+- `kcal`
 - `description`
 - `price`
 
@@ -203,11 +209,13 @@ Valid category values are:
 ## Suggested Row Examples
 
 ```text
-juice-green-glow,juices,Green Glow,"Apple, cucumber, spinach, lemon, ginger","Refreshing, hydrating, rich in greens",,6.50,yes,1,yes
-smoothie-banana-boost,smoothies,Banana Boost,"Banana, oat milk, dates, cinnamon","Creamy, filling, naturally energizing",,7.50,yes,1,yes
-icecream-coconut-vanilla,iceCream,Coconut Vanilla,"Coconut milk, vanilla bean, maple syrup",,"Creamy, smooth, light tropical sweetness",5.50,yes,1,yes
-addon-oat-milk,addOns,Oat Milk,"Plant-based add-on",,,0.50,yes,1,no
+juice-green-glow,juices,Green Glow,"Apple, cucumber, spinach, lemon, ginger","Refreshing, hydrating, rich in greens",,185,,135,yes,1,yes
+smoothie-banana-boost,smoothies,Banana Boost,"Banana, oat milk, dates, cinnamon","Creamy, filling, naturally energizing",,285,,250,yes,1,yes
+icecream-coconut-vanilla,iceCream,Coconut Vanilla,"Coconut milk, vanilla bean, maple syrup",,,210,"Creamy, smooth, light tropical sweetness",160,yes,1,yes
+addon-oat-milk,addOns,Oat Milk,"Plant-based add-on",,,,,40,yes,1,no
 ```
+
+The app also understands `calories`, `calories kcal`, or `nutrition kcal` as aliases for the `kcal` column.
 
 ## Brand Configuration
 
